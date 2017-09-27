@@ -1,0 +1,154 @@
+body {
+  font-family: 'et-book';
+  font-weight: 500;
+}
+
+body {
+  color: #dbc48a;
+  background-color: #000;
+}
+
+.hidden-light-mode {
+    display: initial;
+}
+
+.shown-light-mode {
+  display: none;
+}
+
+body.light-mode {
+  color: #000;
+  background-color: #dbc48a;
+}
+
+
+body.light-mode .shown-light-mode {
+  display: initial;
+}
+
+body.light-mode .hidden-light-mode {
+  display: none;
+}
+
+.container {
+  width: 1280px;
+  margin: auto;
+  position: relative;
+}
+
+.container .slider-wrapper {
+  width: calc(100% - 400px);
+  margin: 200px auto 0;
+  border: 1px solid;
+}
+
+.container ul.buttons {
+  position: absolute;
+  right: 0;
+  top: -180px;
+  list-style: none;
+}
+
+.container ul.buttons li {
+    display: inline-block;
+}
+
+.container ul.buttons li img {
+  width: 50px;
+  height: 50px;
+}
+
+.container ul.menu {
+  position: absolute;
+  right: 0;
+  top: calc(50vh - 200px);
+  transform: translateY(-50%);
+  list-style: none;
+  padding: 0;
+  margin: auto;
+}
+
+.container ul.menu li a {
+  text-decoration: none;
+  font-size: 27px;
+  color: #dbc48a;
+  transition: all 1s ease;
+}
+
+.container ul.menu li.current {
+  -webkit-animation: jiggle 0.2s infinite;
+  -moz-animation-duration: 0.2s;
+  -moz-animation-name: jiggle;
+  -moz-animation-iteration-count: infinite;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+}
+
+@-moz-keyframes jiggle {
+    0% {
+        -moz-transform: rotate(-1deg);
+    }
+    50% {
+        -moz-transform: rotate(1deg);
+    }
+}
+
+@-webkit-keyframes jiggle {
+    0% {
+        -webkit-transform: rotate(-1deg);
+        }
+    50% {
+        -webkit-transform: rotate(1deg);
+    }
+}
+
+body.light-mode .container ul.menu li a {
+  color: #000;
+}
+
+.container .neil {
+  position: absolute;
+  left: 105px;
+  top: calc(85vh - 200px);
+  transform: rotate(-90deg);
+  font-size: 25px;
+  transition: all 1s ease;
+}
+
+.container .slider-wrapper .section {
+  padding: 0 40px;
+  margin-top: -200px;
+}
+
+.container .slider-wrapper .section .arrow-logo img {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: auto;
+}
+
+.container .slider-wrapper .section p {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.container .slider-wrapper .section.home {
+  margin-top: -120px;
+}
+
+.container .slider-wrapper .section.home .neil-logo img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  height: auto;
+}
+
+.container .slider-wrapper .section.home p {
+  text-align: center;
+  font-size: 34px;
+  line-height: 40px;
+}
